@@ -1,0 +1,12 @@
+<div class="container">
+  <h1><%= @article.title %>
+  <%= link_to edit_article_path(@article) do %> <i class="fas fa-pencil"></i><% end %>
+  <%= link_to article_path(@article), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %>
+   <i class="fas fa-eraser"></i>
+    <% end %>
+    </h1>
+  <hr>
+  <p><%= @article.content %></p>
+</div>
+
+<%= link_to "Back to Articles List", articles_path %>

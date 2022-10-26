@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div class="content container">
+    <div class="row">
+      <div class="sm-8">
+    <% @articles.each do |article|  %>
+    <%= link_to article.title, article_path(article.id) %>
+    <%= article.content %>
+    </div>
+    </div>
+  </div>
+  <% end %>
+</div>
